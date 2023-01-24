@@ -1,6 +1,19 @@
-if SHIELD_LAZY_FERRIS_LEFT || SHIELD_LAZY_FERRIS_RIGHT
+# Copyright (c) 2020 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+if SHIELD_LAZY_FERRIS_LEFT
 
 config ZMK_KEYBOARD_NAME
-	default "Lazy Ferris"
+    default "Lazy Ferris"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
+if SHIELD_LAZY_FERRIS_LEFT || SHIELD_LAZY_FERRIS_RIGHT
+
+config ZMK_SPLIT
+    default y
 
 endif
